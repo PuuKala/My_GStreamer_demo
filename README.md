@@ -21,12 +21,12 @@ Run Cerbero bootstrap with line:
 - NOTE: You might need sudo for this. See the installation step above for additional information.  
 - NOTE: Bootstrap takes quite a while. If the program fails and asks whether to abort or retry, retry from the failed step
     (option 2)  
-[//]: # (End list)
+
 Run the following line:  
 ```cerbero build gstreamer-1.0 gst-plugins-base-1.0 gst-plugins-good-1.0```  
 - NOTE: This takes quite a while. If the program fails and asks whether to abort or retry, retry from the failed step
     (option 2)  
-<a/>
+
 Run create_and_build.sh  
   
   
