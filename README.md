@@ -5,7 +5,7 @@ For the CV of Sami Karkinen
 ## Installation instructions for building:
 Run the following line:  
 ```sudo apt install cmake```  
-Get Cerbero from git to your home directory or *~/git/* with line:  
+Get Cerbero from git to your home directory or \~/git with line:  
 ```git clone https://gitlab.freedesktop.org/gstreamer/cerbero```  
 Add cerbero as command to bash:  
 ```echo "alias cerbero='~/git/cerbero/cerbero-uninstalled'" >> ~/.bashrc```  
