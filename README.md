@@ -1,5 +1,5 @@
 # My_GStreamer_demo
-For the CV of Sami Karkinen  
+For my CV  
   
   
 ## Installation instructions for building:
