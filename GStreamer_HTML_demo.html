@@ -1,0 +1,46 @@
+<!-- NOTE: For some reason, this HTML document with the GStreamer stream doesn't work on Chrome. Please use Firefox for now for this demo. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GStreamer OGG-to-website demo</title>
+</head>
+<!--
+Copy the following line to the terminal for GStreamer to start streaming test video in correct format:
+
+gst-launch-1.0 videotestsrc is-live=true horizontal-speed=1 ! theoraenc ! oggmux ! tcpserversink host=127.0.0.1 port=8080
+
+It will show the test video scrolling to the left. It seems to have some hiccups every now and then, but works flawlessly aside from that. The
+videotestsrc along with its parameters can be changed to autovideosrc for webcam feed.
+
+For sound and video, you can start GStreamer with the following line:
+
+gst-launch-1.0 videotestsrc is-live=true horizontal-speed=1 ! theoraenc ! mux. audiotestsrc ! vorbisenc ! mux. oggmux name=mux ! tcpserversink host=127.0.0.1 port=8080
+
+Just like for the previous line for only video, you can replace videotestsrc with autovideosrc and audiotestsrc with autoaudiosrc for webcam+mic
+feed.
+-->
+
+<body>
+    <h1>GStreamer OGG-to-website demo</h1>
+
+    <!-- Html5 video starting automatically when site opened -->
+    <video controls width=320 height=240 autoplay>
+        <!-- The port can be configured to a different one, as long as it's the same as the GStreamer hosting one. The video format can
+            not be changed though, as for some reason the other alternative for Html5 video, mp4, doesn't work to Html5 from GStreamer.
+            Also, for the Html5, the protocol needs to be TCP from GStreamer. -->
+        <source id="src" type="video/ogg">
+        You browser doesn't support element <code>video</code>.
+    </video>
+    <h2>This is a demo for viewing GStreamer videostream in HTML document.</h2>
+    <h4>The demo doesn't work on Chrome, please run it in Firefox or Edge.</h4>
+    <p>For some reason the autoplay tag doesn't always work... You'll need to push the play button yourself in this case.</p>
+    <p>The audio works fine, but the video works after you've started playing and move the progress slider closer to the end.</p>
+    <p>However, if it's pushed all the way to the end, there might not be enough buffer for the video, in which case you can pull the progress slider back a bit.</p>   
+    <script>
+        document.getElementById("src").src = "http://" + location.hostname + ":10000"
+    </script>
+</body>
+
+</html>
