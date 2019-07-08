@@ -18,12 +18,12 @@ Add cerbero as command to bash:
   
 Run Cerbero bootstrap with line:  
 ```cerbero bootstrap```  
-    NOTE: You might need sudo for this. See the installation step above for additional information.  
-    NOTE: Bootstrap takes quite a while. If the program fails and asks whether to abort or retry, retry from the failed step
+- NOTE: You might need sudo for this. See the installation step above for additional information.  
+- NOTE: Bootstrap takes quite a while. If the program fails and asks whether to abort or retry, retry from the failed step
     (option 2)  
 Run the following line:  
 ```cerbero build gstreamer-1.0 gst-plugins-base-1.0 gst-plugins-good-1.0```  
-    NOTE: This takes quite a while. If the program fails and asks whether to abort or retry, retry from the failed step
+- NOTE: This takes quite a while. If the program fails and asks whether to abort or retry, retry from the failed step
     (option 2)  
 Run create_and_build.sh  
   
@@ -36,7 +36,7 @@ Run Cerbero shell with line:
 Run GST_visualizer_demo in the Cerbero shell in the build folder with line:  
 ```./GST_visualizer_demo```  
     You can also add --bluetooth as an added parameter to search for bluetooth device instead of the default speakers.  
-    NOTE: GST_visualizer_demo also has a TCP server sending the visualization as ogg encoded data. You can receive this with
+- NOTE: GST_visualizer_demo also has a TCP server sending the visualization as ogg encoded data. You can receive this with
     GST_ogg_client or by hosting GStreamer_HTML_demo.html on the same machine as the GST_visualizer_demo is running.  
   
   
